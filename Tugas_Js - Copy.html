@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert Nilai</title>
+</head>
+
+<body>
+    <h2>JavaScript Dasar - Convert Nilai</h2>
+    <button onclick="myFunction()">Masukan Nilai</button>
+    <p id="demo"></p>
+
+    <script type="text/javascript">
+
+        function myFunction() {
+            let isi = parseInt(prompt("Enter a Value", "0"), 10);
+
+            var nilai = isi;
+            if (nilai > 80 && nilai <= 100) {
+                text = ("A")
+            } else if (nilai > 70 && nilai <= 80) {
+                text = ("AB")
+            } else if (nilai > 65 && nilai <= 70) {
+                text = ("B")
+            } else if (nilai > 55 && nilai <= 65) {
+                text = ("BC")
+            } else if (nilai > 40 && nilai <= 55) {
+                text = ("C")
+            } else if (nilai >= 0 && nilai <= 40) {
+                text = ("E")
+            } else {
+                text = ("nilai tidak valid")
+            }
+
+            document.getElementById("demo").innerHTML = text;
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
