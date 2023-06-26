@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Luas dan Volume Bangun Ruang</h2>
+    <h4>Kubus</h4>
+    <input type="number" placeholder="Input sisi kubus" id="sisi">
+    <input type="button" onclick="kubus()" value="Hitung">
+    Luas Kubus : <span id="luaskubus"></span>
+    <br><br>
+    <input type="number" placeholder="Input sisi kubus" id="sisi2">
+    <input type="button" onclick="kubus()" value="Hitung">
+    Volume Kubus : <span id="volumekubus"></span>
+    <br>
+    <h4>Balok</h4>
+    <input type="number" placeholder="Input Panjang Balok" id="panjangbalok">
+    <input type="number" placeholder="Input Lebar Balok" id="lebarbalok">
+    <input type="number" placeholder="Input Tinggi Balok" id="tinggibalok">
+    <input type="button" onclick="balok()" value="Hitung">
+    Luas Balok : <span id="luasbalok"></span>
+    <br><br>
+    <input type="number" placeholder="Input Panjang Balok" id="panjangbalok2">
+    <input type="number" placeholder="Input Lebar Balok" id="lebarbalok2">
+    <input type="number" placeholder="Input Tinggi Balok" id="tinggibalok2">
+    <input type="button" onclick="balok()" value="Hitung">
+    Volume Balok : <span id="volumebalok"></span>
+    <br>
+    <h4>Limas Segitiga & Limas Segiempat</h4>
+    <input type="number" placeholder="Input Luas Alas" id="luasalaslimas">
+    <input type="number" placeholder="Input Luas Selubung limas" id="luasselubunglimas">
+    <input type="button" onclick="limas()" value="Hitung">
+    Luas limas Segitiga & Segiempat : <span id="luaslimas"></span>
+    <br><br>
+    <input type="number" placeholder="Input Luas Alas" id="luasalaslimas2">
+    <input type="number" placeholder="Input Tinggi limas" id="tinggilimas">
+    <input type="button" onclick="limas()" value="Hitung">
+    Volume limas Segitiga & Segiempat : <span id="volumelimas"></span>
+    <br>
+    <h4>Prisma Segitiga</h4>
+    <input type="number" placeholder="Input Keliling Alas" id="kelilingprisma">
+    <input type="number" placeholder="Input Tinggi Prisma" id="tinggiprisma">
+    <input type="number" placeholder="Input Luas Alas" id="luasalasprisma">
+    <input type="button" onclick="prisma()" value="Hitung">
+    Luas Prisma Segitiga : <span id="luasprisma"></span>
+    <br><br>
+    <input type="number" placeholder="Input Luas Alas" id="luasalasprisma2">
+    <input type="number" placeholder="Input Tinggi Prisma" id="tinggiprisma2">
+    <input type="button" onclick="prisma()" value="Hitung">
+    Volume Prisma Segitiga : <span id="volumeprisma"></span>
+    <br>
+    <h4>Tabung</h4>
+    <input type="number" placeholder="Input Keliling Alas" id="kelilingtabung">
+    <input type="number" placeholder="Input Tinggi Tabung" id="tinggitabung">
+    <input type="number" placeholder="Input Luas Alas" id="luasalastabung">
+    <input type="button" onclick="tabung()" value="Hitung">
+    Luas Tabung : <span id="luastabung"></span>
+    <br><br>
+    <input type="number" placeholder="Input Jari-jari tabung" id="radiustabung">
+    <input type="number" placeholder="Input Tinggi tabung" id="tinggitabung2">
+    <input type="button" onclick="tabung()" value="Hitung">
+    Volume Tabung : <span id="volumetabung"></span>
+    <br>
+    <h4>Kerucut</h4>
+    <input type="number" placeholder="Input Jari-Jari Kerucut" id="radiuskerucut">
+    <input type="number" placeholder="Input Sisi Kerucut" id="sisikerucut">
+    <input type="button" onclick="kerucut()" value="Hitung">
+    Luas Kerucut : <span id="luaskerucut"></span>
+    <br><br>
+    <input type="number" placeholder="Input Jari-Jari Kerucut" id="radiuskerucut2">
+    <input type="number" placeholder="Input Tinggi Kerucut" id="tinggikerucut">
+    <input type="button" onclick="kerucut()" value="Hitung">
+    Volume Kerucut : <span id="volumekerucut"></span>
+    <br>
+    <h4>Bola</h4>
+    <input type="number" placeholder="Input Jari-Jari Bola" id="radiusbola">
+    <input type="button" onclick="bola()" value="Hitung">
+    Luas Bola : <span id="luasbola"></span>
+    <br><br>
+    <input type="number" placeholder="Input Jari-Jari Bola" id="radiusbola2">
+    <input type="button" onclick="bola()" value="Hitung">
+    Volume Bola : <span id="volumebola"></span>
+    <br><br>
+
+
+    <script type="text/javascript">
+        var luaskubus = document.getElementById('luaskubus');
+        var volumekubus = document.getElementById('volumekubus');
+        var luasbalok = document.getElementById('luasbalok');
+        var volumebalok = document.getElementById('volumebalok');
+        var luaslimas = document.getElementById('luaslimas');
+        var volumelimas = document.getElementById('volumelimas');
+        var luasprisma = document.getElementById('luasprisma');
+        var volumeprisma = document.getElementById('volumeprisma');
+        var luastabung = document.getElementById('luastabung');
+        var volumetabung = document.getElementById('volumetabung');
+        var luaskerucut = document.getElementById('luaskerucut');
+        var volumekerucut = document.getElementById('volumekerucut');
+        var luasbola = document.getElementById('luasbola');
+        var volumebola = document.getElementById('volumebola');
+
+        function kubus() {
+            var s = sisi.value;
+            luaskubus.innerHTML = 6 * (s * s);
+
+            var s = sisi2.value;
+            volumekubus.innerHTML = s * s * s;
+        }
+        function balok() {
+            var p = panjangbalok.value;
+            var l = lebarbalok.value;
+            var t = tinggibalok.value;
+            luasbalok.innerHTML = 2 * ((p * l) + (l * t) + (p * t));
+
+            var p = panjangbalok2.value;
+            var l = lebarbalok2.value;
+            var t = tinggibalok2.value;
+            volumebalok.innerHTML = p * l * t;
+        }
+        function limas() {
+            var alas = luasalaslimas.value;
+            var selubung = luasselubunglimas.value;
+            luaslimas.innerHTML = (alas * 1) + (selubung * 1);
+            // rumus asli (luas alas + luas selubung) 
+
+            var alas = luasalaslimas2.value;
+            var t = tinggilimas.value;
+            volumelimas.innerHTML = 1 / 3 * alas * t;
+        }
+        function prisma() {
+            var ka = kelilingprisma.value;
+            var t = tinggiprisma.value;
+            var la = luasalasprisma.value
+            luasprisma.innerHTML = (ka * t) + (2 * la);
+
+            var la = luasalasprisma2.value;
+            var t = tinggiprisma2.value;
+            volumeprisma.innerHTML = la * t;
+        }
+        function tabung() {
+            var ka = kelilingtabung.value;
+            var t = tinggitabung.value;
+            var la = luasalastabung.value
+            luastabung.innerHTML = (2 * la) + (ka * t) + " cm<sup>2</sup>";
+
+            var r = radiustabung.value;
+            var t = tinggitabung2.value;
+            if (r % 7 == 0) {
+                volumetabung.innerHTML = 22 / 7 * (r * r) * t + " cm<sup>3</sup>";
+            } else {
+                volumetabung.innerHTML = 3.14 * (r * r) * t + " cm<sup>3</sup>";
+            }
+
+        }
+        function kerucut() {
+            var r = radiuskerucut.value;
+            var s = sisikerucut.value;
+            if (r % 7 == 0) {
+                luaskerucut.innerHTML = (22 / 7 * r * r) + (22 / 7 * r * s);
+            } else {
+                luaskerucut.innerHTML = (3.14 * r * r) + (3.14 * r * s);
+            }
+
+            var r = radiuskerucut2.value;
+            var t = tinggikerucut.value;
+            if (r % 7 == 0) {
+                volumekerucut.innerHTML = 1 / 3 * 22 / 7 * r * r * t;
+            } else {
+                volumekerucut.innerHTML = (1 / 3) * (3.14) * r * r * t;
+            }
+        }
+        function bola() {
+            var r = radiusbola.value;
+            if (r % 7 == 0) {
+                luasbola.innerHTML = 4 * 22 / 7 * r * r;
+            } else {
+                luasbola.innerHTML = 4 * 3.14 * r * r;
+            }
+
+            var r = radiusbola2.value;
+            if (r % 7 == 0) {
+                volumebola.innerHTML = 4 / 3 * 22 / 7 * (r * r * r);
+            } else {
+                volumebola.innerHTML = 4 / 3 * 3.14 * (r * r * r);
+            }
+        }
+        function kubus1(s) {
+            var luas;
+            luas = 6 * (s * s);
+
+            return luas
+        }
+        document.write(kubus1(7))
+
+
+
+    </script>
+</body>
+
+</html>
